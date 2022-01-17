@@ -4,7 +4,7 @@
 ## Instructions: Create a web store application following the instructions in Komputer Store App.pdf.
 
 
-## Goal: On completion of this assignment you will be able to: 
+ Goal: On completion of this assignment you will be able to: 
 
 * Manipulate HTML using JavaScript
 * Use JavaScript arrays
