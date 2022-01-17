@@ -63,7 +63,7 @@ function addComputerInformationToBottomCard(computer) {
     }
     getTitle.innerHTML = computer.title;
     getParagraph.innerHTML = computer.description;
-    getPrice.innerHTML = computer.price;
+    getPrice.innerHTML = `${computer.price} kr`;
     getUl.innerHTML = "";
     computer.specs.forEach(spec => {
         let li = document.createElement("li");
