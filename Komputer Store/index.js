@@ -109,7 +109,7 @@ function transferMoney() {
 
 function getALoan() {
     let lendMoney = Number(prompt("How much?"));
-    let maxLoan = bankBalance / 2;
+    let maxLoan = bankBalance * 2;
 
     if (lendMoney === 0) {
         displayMessage("Loan amount can't be 0");
