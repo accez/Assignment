@@ -5,15 +5,15 @@ let gotBankLoan = false;
 const apiUrl = "https://noroff-komputer-store-api.herokuapp.com/";
 const computerUrl = "computers";
 
-const getWorkButtonId = document.querySelector("[id=workBtn]");
+const getWorkButtonId = document.querySelector("[id=work-button]");
 const getPaymentId = document.querySelector("[id=payment]");
-const getBankBalanceId = document.querySelector("[id=bankBalance]");
-const getTransferToBankButtonId = document.querySelector("[id=transferMoney]");
-const getALoanButton = document.querySelector("[id=getALoanButton]");
+const getBankBalanceId = document.querySelector("[id=bank-balance]");
+const getTransferToBankButtonId = document.querySelector("[id=transfer-money-button]");
+const getALoanButton = document.querySelector("[id=get-loan-button]");
 const getMessageId = document.querySelector("[id=message]");
-const getLoanBalance = document.querySelector("[id=loanBalance]");
-const getRepayLoanButtonId = document.querySelector("[id=repayBtn]");
-const getSelectId = document.querySelector("[id=computerList]");
+const getLoanBalance = document.querySelector("[id=loan-balance]");
+const getRepayLoanButtonId = document.querySelector("[id=repay-loan-button]");
+const getSelectId = document.querySelector("[id=computer-list]");
 const getBuyButton = document.querySelector("[id=buy-button]");
 const getImageID = document.querySelector("[id=image]");
 const getTitle = document.querySelector("[id=bottom-title]");
@@ -112,12 +112,12 @@ function getALoan() {
     let maxLoan = bankBalance * 2;
 
     if (lendMoney === 0) {
-        displayMessage("Loan amount can't be 0");
+        displayMessage("Loan amount can't be 0", true);
         return;
     }
 
     if (lendMoney > maxLoan) {
-        displayMessage(`You cannot get a loan more than double of your bank balance. Max loan: ${maxLoan}`);
+        displayMessage(`You cannot get a loan more than double of your bank balance. Max loan: ${maxLoan}`, true);
     }
 
     if (lendMoney <= maxLoan) {
@@ -146,17 +146,19 @@ function repayLoan() {
 }
 
 function buyComputer() {
-    let price = Number(getPrice.innerHTML);
+    let removeCurrency = getPrice.innerHTML.match(/\d/g).join("");
+    let price = Number(removeCurrency);
     if (bankBalance >= price) {
         bankBalance -= price;
         getBankBalanceId.innerHTML = `${bankBalance} kr`;
-        displayMessage(`Congratulation your purchase of ${getTitle.innerHTML} was successful!`);
+        displayMessage(`Congratulation your purchase of ${getTitle.innerHTML} was successful!`, false);
     } else {
-        displayMessage("Insufficient funds");
+        displayMessage("Insufficient funds", true);
     }
 }
 
-function displayMessage(text) {
+function displayMessage(text, error) {
+    error ? getMessageId.setAttribute("id", "error-message") : getMessageId.setAttribute("id", "completed-purchase");
     getMessageId.innerHTML = text;
 }
 
@@ -177,7 +179,7 @@ getTransferToBankButtonId.addEventListener("click", () => {
 
 getALoanButton.addEventListener("click", () => {
     if (gotBankLoan) {
-        displayMessage(`You may not have two loans at once. The initial loan should be paid back in full`);
+        displayMessage(`You may not have two loans at once. The initial loan should be paid back in full`, true);
         return;
     }
     if (!gotBankLoan) {
