@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <script src="index.js" defer></script>
+    <header>
+        <h1>Komputer Store</h1>
+    </header>
+    <h2 id="message"></h2>
+    <main>
+        <div class="container">
+            <div class="card-container">
+                <div class="card">
+                    <h3>Joe Banker</h3>
+                    <div class="text-container">
+                        <p>Balance</p>
+                        <p class="cash" id="bankBalance">0 kr</p>
+                    </div>
+                    <div class="text-container">
+                        <p>Loan </p>
+                        <p class="cash" id="loanBalance">0 kr</p>
+                    </div>
+                    <div class="btn-holder">
+                        <button type="button" class="bank-button" id="getALoanButton">Get a loan</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Work</h3>
+                    <div class="text-container">
+                        <p>Pay</p>
+                        <p class="cash" id="payment"> 0 kr</p>
+                    </div>
+                    <div class="btn-holder">
+                        <button type="button" class="work-btn" id="transferMoney">Bank</button>
+                        <button type="button" class="work-btn" id="workBtn">Work</button>
+                        <button type="button" class="work-btn" id="repayBtn">Repay loan</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Laptops</h3>
+                    <select name="computers" id="computerList">
+                    </select>
+                    <ul>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottom-card">
+                <img src="" id="image">
+                <div class="bottom-text-container">
+                    <h3 id="bottom-title"></h3>
+                    <p id="bottom-paragraph"></p>
+                </div>
+                <div class="bottom-text-container">
+                    <h3 id="price"></h3>
+                    <button id="buy-button">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

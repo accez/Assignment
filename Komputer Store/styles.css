@@ -1,0 +1,77 @@
+header{
+    background-color: black;
+    padding: 1px;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 50%;
+}
+h1{
+    color: white;
+}
+.card h3{
+    margin-left: 10px;
+}
+
+.card button{
+    padding: 8px;
+    margin-bottom: 10px;
+}
+.card-container{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 250px;
+    border: solid;
+    background-color: #f5f4f4f5;
+    display: flex;
+    flex-direction: column;
+}
+.card .btn-holder {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+.text-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    flex-grow: 1
+}
+
+.bank-button{
+    width: 90%;
+    align-self: center;
+}
+.work-btn{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.bottom-card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5%;
+    width: 100%;
+    height: 200px;
+    background-color: #f5f4f4f5;
+}
+#price {
+
+}
+
+ul li {
+    list-style-type: none;
+}
+#image{
+    height: 150px;
+    width: 150px;
+    align-self: center;
+    margin-left: 10px;
+}
