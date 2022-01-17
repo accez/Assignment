@@ -1,4 +1,4 @@
-# Komputer Store assignment for experis academy
+# Komputer Store assignment for Experis Academy
 
 
 ## Instructions: Create a web store application following the instructions in Komputer Store App.pdf.
