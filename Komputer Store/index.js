@@ -177,7 +177,7 @@ getTransferToBankButtonId.addEventListener("click", () => {
 
 getALoanButton.addEventListener("click", () => {
     if (gotBankLoan) {
-        getMessageId.innerHTML = `You may not have two loans at once. The initial loan should be paid back in full`;
+        displayMessage(`You may not have two loans at once. The initial loan should be paid back in full`);
         return;
     }
     if (!gotBankLoan) {
