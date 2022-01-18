@@ -8,7 +8,6 @@ export function fixImageError(image, format) {
     let removeJPG = image.split(".");
     removeJPG.pop();
     removeJPG.push(format);
-    console.log(removeJPG);
     let correctImageUrl = removeJPG.join("");
     return correctImageUrl;
 }
