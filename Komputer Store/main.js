@@ -1,26 +1,26 @@
 import DataController from "./DataController.js";
 import Work from "./Work.js";
 import Bank from "./Bank.js";
+import KomputerStore from "./KomputerStore.js";
+import { updateDOMBalance } from "./domManipulation.js";
 
 const dataController = new DataController();
 const work = new Work(dataController);
 const bank = new Bank(dataController);
+const store = new KomputerStore(dataController);
+
+store.getFetchedComputerData();
 
 const getWorkButtonId = document.querySelector("[id=work-button]");
-const getPaymentId = document.querySelector("[id=payment]");
 const getTransferToBankButtonId = document.querySelector("[id=transfer-money-button]");
-const getBankBalanceId = document.querySelector("[id=bank-balance]");
-const getLoanBalance = document.querySelector("[id=loan-balance]");
 const getALoanButtonId = document.querySelector("[id=get-loan-button]");
 const getRepayLoanButtonId = document.querySelector("[id=repay-loan-button]");
-
-
-
+const getBuyButton = document.querySelector("[id=buy-button]");
 
 
 getWorkButtonId.addEventListener("click", () => {
     work.work();
-    getPaymentId.innerHTML = `${dataController.workBalance} kr`;
+    updateDOMBalance(dataController);
 });
 
 getTransferToBankButtonId.addEventListener("click", () => {
@@ -28,15 +28,13 @@ getTransferToBankButtonId.addEventListener("click", () => {
         return;
     }
     work.transferMoney();
-    getPaymentId.innerHTML = `${dataController.workBalance} kr`;
-    getBankBalanceId.innerHTML = `${dataController.bankBalance} kr`;
-    getLoanBalance.innerHTML = `${dataController.loanBalance} kr`;
+    updateDOMBalance(dataController);
 });
 
 getALoanButtonId.addEventListener("click", () => {
     bank.getALoan();
-    getBankBalanceId.innerHTML = `${dataController.bankBalance}kr`;
-    getLoanBalance.innerHTML = `${dataController.loanBalance}kr`;
+    updateDOMBalance(dataController);
+
 });
 
 getRepayLoanButtonId.addEventListener("click", () => {
@@ -44,6 +42,10 @@ getRepayLoanButtonId.addEventListener("click", () => {
         return;
     }
     bank.repayLoan();
-    getPaymentId.innerHTML = `${dataController.workBalance}kr`;
-    getLoanBalance.innerHTML = `${dataController.loanBalance}kr`;
+    updateDOMBalance(dataController);
+
+});
+
+getBuyButton.addEventListener("click", () => {
+    store.buyComputer();
 });
