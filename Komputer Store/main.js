@@ -12,6 +12,8 @@ const getTransferToBankButtonId = document.querySelector("[id=transfer-money-but
 const getBankBalanceId = document.querySelector("[id=bank-balance]");
 const getLoanBalance = document.querySelector("[id=loan-balance]");
 const getALoanButtonId = document.querySelector("[id=get-loan-button]");
+const getRepayLoanButtonId = document.querySelector("[id=repay-loan-button]");
+
 
 
 
@@ -34,5 +36,14 @@ getTransferToBankButtonId.addEventListener("click", () => {
 getALoanButtonId.addEventListener("click", () => {
     bank.getALoan();
     getBankBalanceId.innerHTML = `${dataController.bankBalance}kr`;
+    getLoanBalance.innerHTML = `${dataController.loanBalance}kr`;
+});
+
+getRepayLoanButtonId.addEventListener("click", () => {
+    if (dataController.loanBalance === 0) {
+        return;
+    }
+    bank.repayLoan();
+    getPaymentId.innerHTML = `${dataController.workBalance}kr`;
     getLoanBalance.innerHTML = `${dataController.loanBalance}kr`;
 });

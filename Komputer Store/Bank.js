@@ -29,6 +29,20 @@ class Bank {
             }
         }
     }
+    repayLoan() {
+        if (this.props.workBalance > this.props.loanBalance) {
+            this.props.workBalance -= this.props.loanBalance;
+            this.props.loanBalance = 0;
+            this.props.gotBankLoan = false;
+
+        } else {
+            this.props.loanBalance -= this.props.workBalance;
+            this.props.workBalance = 0;
+        }
+        if (this.props.loanBalance === 0) {
+            this.props.gotBankLoan = false;
+        }
+    }
 }
 
 export default Bank;
