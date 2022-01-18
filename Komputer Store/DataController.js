@@ -4,6 +4,8 @@ class DataController {
         this.bankBalance = bankBalance;
         this.loanBalance = loanBalance;
         this.gotBankLoan = false;
+        this.apiUrl = "https://noroff-komputer-store-api.herokuapp.com/";
+        this.computerUrl = "computers";
     }
 }
 
