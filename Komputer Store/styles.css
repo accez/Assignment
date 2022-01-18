@@ -96,11 +96,11 @@ h1{
     align-self: center;
     margin-left: 10px;
 }
-#completed-purchase{
+.completed-purchase{
     text-align: center;
     color: #7AC74F;
 }
-#error-message{
+.error-message{
     text-align: center;
     color: #DB4C40;
 }
