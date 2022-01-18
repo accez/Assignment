@@ -21,7 +21,8 @@ Instructions: Create a web store application following the instructions in Kompu
 ```
 ```
 
-## Contributing
-See [the contributing file](CONTRIBUTING.md)!
+## Maintainers
+[@Simon Palmgren](https://github.com/accez)
+
 ## License
 [MIT © Simon Palmgren.](./LICENSE)
