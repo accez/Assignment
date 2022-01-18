@@ -1,4 +1,4 @@
-import { displayMessage } from "./helper.js";
+import { displayMessage } from "../helpers/helper.js";
 
 class Bank {
     constructor(props) {

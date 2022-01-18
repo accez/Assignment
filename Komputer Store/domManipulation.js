@@ -1,4 +1,4 @@
-import { fixImageError } from "./helper.js";
+import { fixImageError } from "./helpers/helper.js";
 
 export const updateDOMBalance = ({ ...props }) => {
     const getPaymentId = document.querySelector("[id=payment]");

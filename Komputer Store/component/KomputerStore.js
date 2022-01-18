@@ -1,5 +1,5 @@
-import { displayMessage } from "./helper.js";
-import { updateDOMBalance, addComputerInformationToBottomCard, addToSelectElement } from "./domManipulation.js";
+import { displayMessage } from "../helpers/helper.js";
+import { updateDOMBalance, addComputerInformationToBottomCard, addToSelectElement } from "../domManipulation.js";
 
 class KomputerStore {
     constructor(props) {

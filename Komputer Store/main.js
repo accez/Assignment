@@ -1,7 +1,7 @@
-import DataController from "./DataController.js";
-import Work from "./Work.js";
-import Bank from "./Bank.js";
-import KomputerStore from "./KomputerStore.js";
+import DataController from "./component/DataController.js";
+import Work from "./component/Work.js";
+import Bank from "./component/Bank.js";
+import KomputerStore from "./component/KomputerStore.js";
 import { updateDOMBalance } from "./domManipulation.js";
 
 const dataController = new DataController();
