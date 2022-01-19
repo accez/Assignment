@@ -10,17 +10,6 @@ Instructions: Create a web store application following the instructions in Kompu
 * Listen for events from HTML elements
 * Write custom CSS to style HTML elements and layouts
 
-## Installation
-
-
-
-```bash
-```
-
-## Usage
-```
-```
-
 ## Maintainers
 [@Simon Palmgren](https://github.com/accez)
 
