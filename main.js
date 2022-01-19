@@ -17,7 +17,7 @@ const getALoanButtonId = document.querySelector("[id=get-loan-button]");
 const getRepayLoanButtonId = document.querySelector("[id=repay-loan-button]");
 const getBuyButton = document.querySelector("[id=buy-button]");
 
-
+// Event listeners
 getWorkButtonId.addEventListener("click", () => {
     work.work();
     updateDOMBalance(dataController);

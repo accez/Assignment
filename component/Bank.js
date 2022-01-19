@@ -4,6 +4,12 @@ class Bank {
     constructor(props) {
         this.props = props;
     }
+    /**
+     * Method to get a loan.
+     * You can only get a loan if you dont already have a loan.
+     * The loan can only be twice the amount of what your current bank balance is.
+     * The method also checks if you try to take a loan that is less then or equal to 0 and then dismiss
+     */
     getALoan() {
         if (this.props.gotBankLoan) {
             displayMessage(`You may not have two loans at once. The initial loan should be paid back in full`, true);
@@ -29,6 +35,10 @@ class Bank {
             }
         }
     }
+
+    /**
+     * Method to repay the loan instantaneous if you have sufficient work balance
+     */
     repayLoan() {
         if (this.props.workBalance > this.props.loanBalance) {
             this.props.workBalance -= this.props.loanBalance;

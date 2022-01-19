@@ -3,10 +3,18 @@ class Work {
         this.props = props;
     }
 
+    /**
+     * Adds 100 to workBalance
+     */
     work() {
         this.props.workBalance += 100;
     }
 
+    /**
+     * Transfer the money to bank
+     * The method transfers money from workBalance to bankBalance.
+     * If you have a loan it will deduct 10% of the transfer towards the loan
+     */
     transferMoney() {
         let deduction = this.props.workBalance * 0.1;
         let remainingAfterDeduction = this.props.workBalance - deduction;
