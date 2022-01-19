@@ -10,6 +10,8 @@ Instructions: Create a web store application following the instructions in Kompu
 * Listen for events from HTML elements
 * Write custom CSS to style HTML elements and layouts
 
+[Komputer Store GitHub Pages](https://accez.github.io/Komputer-Store/)
+
 ## Maintainers
 [@Simon Palmgren](https://github.com/accez)
 
