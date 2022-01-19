@@ -1,5 +1,10 @@
 import { fixImageError } from "./helpers/helper.js";
 
+/**
+ * Updates the value of all balances
+ * 
+ * @param {Object} props Takes the data from dataController
+ */
 export const updateDOMBalance = ({ ...props }) => {
     const getPaymentId = document.querySelector("[id=payment]");
     const getBankBalanceId = document.querySelector("[id=bank-balance]");
@@ -10,6 +15,12 @@ export const updateDOMBalance = ({ ...props }) => {
     getLoanBalance.innerHTML = `${props.loanBalance} kr`;
 };
 
+/**
+ * Updates the bottom card to display the computer information
+ * 
+ * @param {Array} computer The computers array
+ * @param {*} apiURL The url for the API
+ */
 export const addComputerInformationToBottomCard = (computer, apiURL) => {
     const getImageID = document.querySelector("[id=image]");
     const getTitle = document.querySelector("[id=bottom-title]");
@@ -34,6 +45,12 @@ export const addComputerInformationToBottomCard = (computer, apiURL) => {
     });
 };
 
+/**
+ * Adds a title and id to the <option> tag inside the <select> element.
+ * 
+ * @param {string} title The title of the computer
+ * @param {number} id The ID of the computer
+ */
 export const addToSelectElement = (title, id) => {
     const getSelectId = document.querySelector("[id=computer-list]");
     let option = document.createElement("option");
